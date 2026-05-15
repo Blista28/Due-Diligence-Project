@@ -21,49 +21,45 @@
         <!-- Main Directory Area -->
         <main class="main-content">
             <header class="top-bar">
-                <h1 class="page-title">Vendor Directory</h1>
-                <div class="header-actions">
-                    <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <button class="primary-btn">
-                        <i class="fa-solid fa-plus"></i> Create an assessment
-                    </button>
+                <div>
+                    <p class="page-subtitle">Vendor Directory</p>
+                    <h1 class="page-title">Vendor Directory</h1>
                 </div>
+                <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
             </header>
 
-            <!-- Table Container -->
-<section class="table-container">
+            <section class="directory-card">
+                <div class="directory-header">
+                    <div>
+                        <p class="search-label">Search for vendor</p>
+                        <div class="search-bar-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" class="vendor-search" placeholder="Search vendor" aria-label="Search vendor">
+                        </div>
+                    </div>
+                    <button class="add-vendor-btn" type="button">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Vendor
+                    </button>
+                </div>
 
-    <h3 class="section-title">Search for Vendors</h3>
-
-    <div class="search-bar-container">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" class="vendor-search" placeholder="Search vendors, assessment names, types..." aria-label="Search vendors">
-    </div>
-
-    <div class="table-responsive">
-
-        <table class="assessment-table">
-
-            <thead>
-                <tr>
-                    <th>Company Name</th>
-                    <th>Services</th>
-                    <th>Contact</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <!-- Dynamic rows inserted by vendorDirectory.js -->
-            </tbody>
-
-        </table>
-
-    </div>
-
-</section>
+                <div class="table-responsive">
+                    <table class="vendor-table">
+                        <thead>
+                            <tr>
+                                <th>COMPANY NAME</th>
+                                <th>SERVICES</th>
+                                <th>CONTACT</th>
+                                <th>DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody class="vendor-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </main>
     </div>
 
