@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validify - Assessment Reviews</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assessmentReviews.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside id="sidebar-container"></aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div>
+                    <p class="page-subtitle">Assessment Reviews</p>
+                    <h1 class="page-title">Assessment Reviews</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <section class="card selector-card">
+                <div class="card-heading">
+                    <h2>Assessment Selector</h2>
+                </div>
+                <div class="selector-grid">
+                    <div class="field-card">
+                        <label>Select Vendor</label>
+                        <select>
+                            <option selected disabled>Select Vendor</option>
+                            <option>Acme Security</option>
+                            <option>Nova Risk Solutions</option>
+                            <option>BlueShield Partners</option>
+                        </select>
+                    </div>
+                    <div class="field-card">
+                        <label>Date Submitted</label>
+                        <input type="date" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="card questionnaire-card">
+                <div class="card-heading">
+                    <h2>Questionnaire Review</h2>
+                    <div class="tabs" role="tablist">
+                        <button class="tab-button active" data-target="due-diligence">Due Diligence Form</button>
+                        <button class="tab-button" data-target="info-security">Information Security</button>
+                        <button class="tab-button" data-target="signoff-sheet">Sign-Off Sheet</button>
+                    </div>
+                </div>
+
+                <div class="tab-pane active" id="due-diligence">
+                    <div class="section-label">Vendor Information</div>
+                    <div class="question-block">
+                        <div class="question-text">Type of service/s deployment model would this vendor implement for Company?</div>
+                        <div class="response-grid">
+                            <div>
+                                <div class="response-label">Vendor Response</div>
+                                <div class="response-pill">Cloud hosted platform</div>
+                            </div>
+                            <div>
+                                <div class="response-label">Company Comment</div>
+                                <textarea placeholder="Company Review or Comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <div class="question-text">Does the vendor provide end-to-end monitoring and alerting for service availability?</div>
+                        <div class="response-grid">
+                            <div>
+                                <div class="response-label">Vendor Response</div>
+                                <div class="response-pill">Yes</div>
+                            </div>
+                            <div>
+                                <div class="response-label">Company Comment</div>
+                                <textarea placeholder="Company Review or Comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="info-security">
+                    <div class="section-label">A. Leadership and Management</div>
+                    <div class="question-block">
+                        <div class="question-text">1. Is there a dedicated security officer or team responsible for overseeing the implementation of the information security program?</div>
+                        <div class="response-grid">
+                            <div>
+                                <div class="response-label">Vendor Response</div>
+                                <div class="response-pill pill-inline">Yes</div>
+                                <p class="small-text">Policy_Signed.pdf</p>
+                            </div>
+                            <div>
+                                <div class="response-label">Company Comment</div>
+                                <textarea placeholder="Company Review or Comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <div class="question-text">2. Does your security officer report to senior management or part of the organization’s steering committee?</div>
+                        <div class="response-grid">
+                            <div>
+                                <div class="response-label">Vendor Response</div>
+                                <div class="response-pill pill-inline">No</div>
+                                <p class="small-text">Policy_Signed.pdf</p>
+                            </div>
+                            <div>
+                                <div class="response-label">Company Comment</div>
+                                <textarea placeholder="Company Review or Comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="signoff-sheet">
+                    <div class="section-label">Final Sign-Off Authorization</div>
+                    <div class="signoff-row">
+                        <div>IT</div>
+                        <div>Name: ...</div>
+                        <div class="status-badge pending">Pending</div>
+                    </div>
+                    <div class="signoff-row">
+                        <div>Info Sec</div>
+                        <div>Name: ...</div>
+                        <div class="status-badge pending">Pending</div>
+                    </div>
+                    <div class="signoff-row">
+                        <div>Risk Management Officer</div>
+                        <div>Name: Juan Luna</div>
+                        <div class="status-badge signed">Signed</div>
+                    </div>
+                    <div class="signoff-row">
+                        <div>Compliance</div>
+                        <div>Name: ...</div>
+                        <div class="status-badge pending">Pending</div>
+                    </div>
+                    <div class="signoff-row">
+                        <div>DPO</div>
+                        <div>Name: ...</div>
+                        <div class="status-badge pending">Pending</div>
+                    </div>
+                    <div class="signoff-row">
+                        <div>HR</div>
+                        <div>Name: ...</div>
+                        <div class="status-badge pending">Pending</div>
+                    </div>
+                    <div class="signoff-actions">
+                        <button class="secondary-btn">Finalize Assessment</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="assessmentReviews.js"></script>
+</body>
+</html>

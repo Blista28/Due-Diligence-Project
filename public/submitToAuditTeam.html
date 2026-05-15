@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validify - Submit Assessment to Audit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="submitToAuditTeam.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside id="sidebar-container"></aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div>
+                    <p class="page-subtitle">Reporting & Sign-offs / Submit file to Audit Team</p>
+                    <h1 class="page-title">Submit Assessment to Audit</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <section class="card summary-card">
+                <div class="summary-header">
+                    <h2>Assessment Summary</h2>
+                </div>
+
+                <div class="summary-grid">
+                    <div class="summary-row">
+                        <span class="summary-label">Vendor Name:</span>
+                        <span class="summary-value">Starlight Corp.</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Service Type:</span>
+                        <span class="summary-value">Logistics</span>
+                    </div>
+                </div>
+
+                <div class="status-grid">
+                    <div class="status-row">
+                        <span>Due Diligence Form:</span>
+                        <span class="status-value success">Complete</span>
+                    </div>
+                    <div class="status-row">
+                        <span>Information Security:</span>
+                        <span class="status-value success">Cleared</span>
+                    </div>
+                    <div class="status-row">
+                        <span>Sign-Off Sheet:</span>
+                        <span class="status-value success">Signed and Approved</span>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button class="cancel-btn" type="button">Cancel</button>
+                    <button class="submit-btn" type="button">Submit to Audit</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="submitToAuditTeam.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validify - Form for Sign-off</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="formForSignoff.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside id="sidebar-container"></aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div>
+                    <p class="page-subtitle">Reporting & Sign-offs / Form for Sign-off</p>
+                    <h1 class="page-title">Form for Sign-off</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <section class="card signoff-card">
+                <div class="signoff-header">
+                    <h2>Sign-off Authorization</h2>
+                    <p>Please provide your digital signature details to finalize approval.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="role">Department / Role</label>
+                        <select id="role" aria-label="Select Role">
+                            <option selected disabled>Select Role</option>
+                            <option>IT</option>
+                            <option>Info Sec</option>
+                            <option>Risk Management</option>
+                            <option>Compliance</option>
+                            <option>DPO</option>
+                            <option>HR</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Signer's Full Name</label>
+                        <input id="name" type="text" placeholder="Enter Full Name" aria-label="Signer Full Name">
+                    </div>
+
+                    <div class="decision-group">
+                        <p class="input-label">Approval Decision</p>
+                        <div class="radio-grid">
+                            <label class="radio-button">
+                                <input type="radio" name="decision" value="approve" checked>
+                                <span></span>
+                                Approve and Sign
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="decision" value="pending">
+                                <span></span>
+                                Keep Pending
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Digital Signature</label>
+                        <button class="upload-btn" type="button">
+                            <i class="fa-solid fa-upload"></i>
+                            Upload Signature
+                        </button>
+                    </div>
+                </div>
+
+                <div class="action-row">
+                    <button class="cancel-btn" type="button">Cancel</button>
+                    <button class="confirm-btn" type="button">Confirm & Sign-Off</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="formForSignoff.js"></script>
+</body>
+</html>

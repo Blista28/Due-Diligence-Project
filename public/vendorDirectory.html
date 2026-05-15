@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validify - Vendor Directory</title>
+    <!-- Typography: Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons: Font Awesome 6.5.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="vendorDirectory.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Reusable Sidebar Placeholder -->
+        <aside id="sidebar-container"></aside>
+
+        <!-- Main Directory Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 class="page-title">Vendor Directory</h1>
+                <div class="header-actions">
+                    <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="primary-btn">
+                        <i class="fa-solid fa-plus"></i> Create an assessment
+                    </button>
+                </div>
+            </header>
+
+            <!-- Table Container -->
+<section class="table-container">
+
+    <h3 class="section-title">Search for Vendors</h3>
+
+    <div class="search-bar-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" class="vendor-search" placeholder="Search vendors, assessment names, types..." aria-label="Search vendors">
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="assessment-table">
+
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Services</th>
+                    <th>Contact</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Dynamic rows inserted by vendorDirectory.js -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="sidebar.js"></script>
+    <script src="vendorDirectory.js"></script>
+</body>
+</html>

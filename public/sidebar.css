@@ -134,8 +134,13 @@
     font-weight: 500;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropdown-content a.active {
     color: var(--primary-blue);
+}
+
+.dropdown-content a.active {
+    font-weight: 700;
 }
 
 .sidebar-footer {
