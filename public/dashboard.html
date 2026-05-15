@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validify - Vendor Dashboard</title>
+    <!-- Typography: Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons: Font Awesome 6.5.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Reusable Sidebar Placeholder -->
+        <aside id="sidebar-container"></aside>
+
+        <!-- Main Dashboard Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="header-actions">
+                    <button class="icon-btn moon-btn" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="primary-btn">
+                        <i class="fa-solid fa-plus"></i> Create an assessment
+                    </button>
+                </div>
+            </header>
+
+<!-- Statistic Cards Grid -->
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-info">
+            <span class="stat-label">Total Created</span>
+            <h2 class="stat-value" id="stat-total">0</h2>
+        </div>
+        <div class="stat-icon icon-orange"><i class="fa-solid fa-file-circle-plus"></i></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-info">
+            <span class="stat-label">Total Drafted</span>
+            <h2 class="stat-value" id="stat-drafted">0</h2>
+        </div>
+        <div class="stat-icon icon-gray"><i class="fa-solid fa-pen-to-square"></i></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-info">
+            <span class="stat-label">Total Submitted</span>
+            <h2 class="stat-value" id="stat-submitted">0</h2>
+        </div>
+        <div class="stat-icon icon-purple"><i class="fa-solid fa-paper-plane"></i></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-info">
+            <span class="stat-label">Total Reviewed</span>
+            <h2 class="stat-value" id="stat-reviewed">0</h2>
+        </div>
+        <div class="stat-icon icon-teal"><i class="fa-solid fa-circle-check"></i></div>
+    </div>
+</section>
+
+            <!-- Table Container -->
+<section class="table-container">
+
+    <h3 class="section-title">Recent Assessments</h3>
+
+    <div class="table-responsive">
+
+        <table class="assessment-table">
+
+            <thead>
+                <tr>
+                    <th>Assessment Name</th>
+                    <th>Type</th>
+                    <th>Date Modified</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Dynamic rows inserted by dashboard.js -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="sidebar.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

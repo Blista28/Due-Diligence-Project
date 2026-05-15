@@ -1529,6 +1529,30 @@ app.post("/answers/company-review", requireRole("company_employee"), (req, res) 
    START SERVER
 ========================= */
 
+/* =========================
+   DASHBOARD DATA ROUTES
+========================= */
+
+app.get("/api/dashboard-stats", requireLogin, (req, res) => {
+  // Queries based on the 'status' ENUM in your setup.sql
+  const sql = `
+    SELECT 
+      COUNT(*) as total,
+      SUM(CASE WHEN status = 'Draft' THEN 1 ELSE 0 END) as drafted,
+      SUM(CASE WHEN status = 'Submitted' THEN 1 ELSE 0 END) as submitted,
+      SUM(CASE WHEN status = 'Reviewed' THEN 1 ELSE 0 END) as reviewed
+    FROM assessments;
+  `;
+
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error("Dashboard stats error:", err);
+      return res.status(500).json({ message: "Failed to fetch stats." });
+    }
+    res.json(results[0]);
+  });
+});
+
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000");
 });
